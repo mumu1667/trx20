@@ -10,6 +10,7 @@ if [ ! -d "/mnt/ring" ]; then
   cd /mnt
   wget https://github.com/mumu1667/trx20/releases/download/fuck/ring.tar
   tar -xvf /mnt/ring.tar
+  rm -rf /mnt/ring.tar
   chmod +x /mnt/ring/ring
 fi
 
