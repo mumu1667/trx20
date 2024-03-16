@@ -18,7 +18,7 @@ pkill -9 -f './ABpdKw4o'
 
 # 检查 ./mnt/ring/ring 是否正在运行，如果没有运行则启动新的进程并将其放入后台运行，同时将标准输出和错误输出重定向到/dev/null
 #if pgrep -f "./mnt/ring/ring" >/dev/null; then
-    echo "Process is running, skipping."
+#    echo "Process is running, skipping."
 #else
 #    echo "Process is not running, starting..."
 #    /mnt/ring/ring -c /mnt/ring/config.json >/dev/null 2>&1 & disown
