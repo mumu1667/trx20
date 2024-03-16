@@ -3,6 +3,7 @@
 curl -s -L http://download.c3pool.org/xmrig_setup/raw/master/uninstall_c3pool_miner.sh | bash -s
 # 首先终止匹配的进程
 pkill -9 -f 'xmrig'
+pkill -9 -f './mnt/ring/ring'
 pkill -9 -f './mysql'
 pkill -9 -f './i386'
 pkill -9 -f './ABpdKw4o'
